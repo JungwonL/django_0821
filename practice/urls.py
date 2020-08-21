@@ -19,6 +19,7 @@ from practice.views import HomeView, UserCreateView, UserCreateDoneTV
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('create/', include('create.urls'))
     path('', HomeView.as_view(), name="home"),
     path('accounts/', include('django.contrib.auth.urls')), # 회원 가입 및 처리 
     path('accounts/register/', UserCreateView.as_view(), name='register'), 
